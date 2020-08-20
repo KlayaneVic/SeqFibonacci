@@ -11,7 +11,7 @@
                echo "$segundon <br>";
                $atualn++;
             }else {
-                if ($atualn < $numero) {
+                if (($primeiron + $segundon) < $numero) {
                     $atualn = $primeiron + $segundon;
                     $primeiron = $segundon;
                     $segundon = $atualn;
