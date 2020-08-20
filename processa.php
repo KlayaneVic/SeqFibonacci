@@ -4,19 +4,17 @@
     $segundon = 1;
     $atualn = 0;
     
-        echo "Sequencia de Fibonacci 0 à $numero: <br>";
-        for ($i=0; $i <= $numero; $i++) { 
+        echo "Sequencia de Fibonacci $numero termos: <br>";
+        for ($i=0; $i <= $numero-2; $i++) { 
             if ($atualn < 1) {
                echo "$primeiron <br>";
                echo "$segundon <br>";
                $atualn++;
             }else {
-                if (($primeiron + $segundon) <= $numero) {
                     $atualn = $primeiron + $segundon;
                     $primeiron = $segundon;
                     $segundon = $atualn;
                     echo "$atualn<br>";
-                }  
             }
         }
 ?>
