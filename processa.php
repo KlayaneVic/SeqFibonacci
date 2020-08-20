@@ -3,18 +3,27 @@
     $primeiron = 0;
     $segundon = 1;
     $atualn = 0;
+    $cont = 1;
     
-        echo "Sequencia de Fibonacci $numero termos: <br>";
-        for ($i=0; $i <= $numero-2; $i++) { 
+        echo "Sequencia de Fibonacci $numero Termos: <br>";
+        for ($i=0; $i < $numero; $i++) { 
             if ($atualn < 1) {
-               echo "$primeiron <br>";
-               echo "$segundon <br>";
-               $atualn++;
+                echo "Termo $cont - $primeiron <br>";
+                $atualn++;
+                
+            }elseif (($atualn == 1) && ($cont <= 2)) {
+                echo "Termo $cont - $segundon <br>";
+                $atualn++;
+
             }else {
+                if ($cont <= $numero) {
                     $atualn = $primeiron + $segundon;
                     $primeiron = $segundon;
                     $segundon = $atualn;
-                    echo "$atualn<br>";
+                    echo "Termo $cont - $atualn<br>";
+                }  
             }
+
+            $cont++;
         }
 ?>
